@@ -20,5 +20,8 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('password'),
             'role' => 'admin',
         ]);
+
+         // Create 5 agent users
+        User::factory()->count(5)->create(['role' => 'agent']);
     }
 }
